@@ -17,6 +17,7 @@ class Villain(models.Model):
 class Sponsor(models.Model):
     name = models.CharField(max_length=50)
     description = models.CharField(max_length=100)
+    netWorth = models.FloatField(default=0.0)
     fortune_origin = models.CharField(max_length=30)
 
 class Abilities(models.Model):
