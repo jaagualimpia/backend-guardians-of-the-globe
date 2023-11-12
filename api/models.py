@@ -16,8 +16,9 @@ class Villain(models.Model):
 
 class Sponsor(models.Model):
     name = models.CharField(max_length=50)
-    description = models.CharField(max_length=100)
     netWorth = models.FloatField(default=0.0)
+    gender = models.CharField(max_length=15)
+    dateOfbirth = models.DateField()
     fortune_origin = models.CharField(max_length=30)
 
 class Abilities(models.Model):
@@ -32,7 +33,7 @@ class Weakness(models.Model):
 
 class Sponsorship(models.Model):
     hero = models.ForeignKey(Hero, on_delete=models.CASCADE)
-    sponsor = models.ForeignKey(Villain, on_delete=models.CASCADE)
+    sponsor = models.ForeignKey(Sponsor, on_delete=models.CASCADE)
     amount = models.FloatField()
 
 class Battle(models.Model):
@@ -40,7 +41,6 @@ class Battle(models.Model):
     villain = models.ForeignKey(Villain, on_delete=models.CASCADE)
     date = models.DateField()
     winned = models.BooleanField()
-    description = models.CharField(max_length=50)
 
 class Relationships(models.Model):
     hero1 = models.ForeignKey(Hero, on_delete=models.CASCADE, related_name='first_hero')
