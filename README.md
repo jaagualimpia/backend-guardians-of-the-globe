@@ -8,7 +8,7 @@ En este apartado se especifican las acciones necesarias a llevar a cabo para eje
 3. postgreSQL
 
 # Paso a paso
- 1. Primero se debe instalar el proyecto en la maquina haciendo uso de git clone 
+ 1. Primero se debe instalar el proyecto en la maquina haciendo uso de git clone y despues de esto ejecutar el comando `cd guardians_of_the_globe_back` para entrar a la carpeta del proyecto.
  2. Posteriormente se deberá de crear en PostgreSQL una base de datos que se llame guardians_of_the_globe con el siguiente comando en un editor de consultas sql de pgadmin o usando el shell de posgres (psql): `CREATE DATABASE guardians_of_the_globe;`
  3. De ahí crearemos el entorno virtual en el cual instalaremos las librerías necesarias para el correcto funcionamiento del proyecto haciendo uso de los siguientes comandos:
 
