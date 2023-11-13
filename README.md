@@ -3,10 +3,9 @@ En este apartado se especifican las acciones necesarias a llevar a cabo para eje
 
 # Prerequisitos
 - La maquina en la cual se quiera ejecutar el proyecto necesita de los siguientes elementos. 
--- docker y docker compose
--- git 
--- Python 3.10.0 en adelante 
--- postgreSQL
+1. git 
+2. Python 3.10.0 en adelante 
+3. postgreSQL
 
 # Paso a paso
  1. Primero se debe instalar el proyecto en la maquina haciendo uso de git clone 
