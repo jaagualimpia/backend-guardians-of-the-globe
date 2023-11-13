@@ -26,6 +26,13 @@ En este apartado se especifican las acciones necesarias a llevar a cabo para eje
 			`source venv/bin/activate`
 
 4. En este punto se debería de haber ejecutado de manera satisfactoria el entorno virtual, ahora dentro de este ejecutaremos el siguiente comando `pip install -r requirements.txt`  
-5. A partir de este momento podremos ejecutar nuestro proyecto, pero antes necesitamos construir las relaciones de la base de datos, para esto usaremos el comando: `py manage.py makemigrations` y `py manage.py migrate`
-7. Ahora ejecutaremos el archivo yml con la configuración de la imagen de la base de datos que vamos a utilizar, ejecutamos entonces: `docker compose up docker-compose.yml`
-8. Cuando ya se haya lanzado nuestro servicio de manera correcta ingresaremos 
+5.  Aquí deberemos de crear un archivo .env, en el cual deberemos de definir variables de entorno que cumplan con la siguiente estructura:
+
+	    DB_NAME=guardians_of_the_globe
+	    DB_USER=<nombre_usuario>
+	    DB_PASSWORD=<clave_usuario>
+	    DB_ROOT_DEFAULT_PASSWORD=<clave_root_por_defecto>
+				
+6. Ahora ejecutaremos el archivo yml con la configuración de la imagen de la base de datos que vamos a utilizar, ejecutamos entonces: `docker compose up docker-compose.yml`
+
+7. A partir de este momento podremos ejecutar nuestro proyecto, pero antes necesitamos construir las relaciones de la base de datos, para esto usaremos el comando: `py manage.py makemigrations` seguido de: `py manage.py migrate`
